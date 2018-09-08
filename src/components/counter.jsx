@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-
+// Rendering Lists
 class Counter extends Component {
   state = {
-    count: 0
+    count: 0,
+    tags: ["tag1", "tag2", "tag3"]
   };
-  // Rendering Classes Dynamically
+
   render() {
     return (
       // React.Fragment can be use if this component not returning parent E.g. div
@@ -14,6 +15,12 @@ class Counter extends Component {
         </span>
 
         <button className="btn btn-secondary btn-sm">Increment</button>
+
+        <ul>
+          {this.state.tags.map(tag => (
+            <li key={tag}>{tag}</li>
+          ))}
+        </ul>
       </div>
     );
   }
