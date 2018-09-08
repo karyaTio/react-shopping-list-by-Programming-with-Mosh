@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Counter from "./counter";
-// Removing the local state
+
 class Counters extends Component {
   state = {
     counters: [
