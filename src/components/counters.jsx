@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Counter from "./counter";
-// Passing Childern
+// Raising and handling event
 class Counters extends Component {
   state = {
     counters: [
@@ -11,13 +11,20 @@ class Counters extends Component {
     ]
   };
 
+  handleDelete = () => {
+    console.log("Event Handler Called");
+  };
+
   render() {
     return (
       <div>
         {this.state.counters.map(counter => (
-          <Counter key={counter.id} value={counter.value} id={counter.id}>
-            <h4>Counter #{counter.id}</h4>
-          </Counter>
+          <Counter
+            key={counter.id}
+            value={counter.value}
+            id={counter.id}
+            onDelete={this.handleDelete}
+          />
         ))}
       </div>
     );
