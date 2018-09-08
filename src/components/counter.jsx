@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// Updateing The State
+// Passing Event Argument
 class Counter extends Component {
   state = {
     count: 0
@@ -18,7 +18,7 @@ class Counter extends Component {
         </span>
 
         <button
-          onClick={this.handleIncrement}
+          onClick={() => this.handleIncrement()}
           className="btn btn-secondary btn-sm"
         >
           Increment
