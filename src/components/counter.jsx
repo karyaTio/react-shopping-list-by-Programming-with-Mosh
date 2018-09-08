@@ -1,13 +1,18 @@
 import React, { Component } from "react";
-// Rendering Lists
+// Binding Event Handlers
 class Counter extends Component {
   state = {
     count: 0
   };
 
-  handleIncrement() {
-    console.log("Increment Clicked");
-  }
+  // constructor() {
+  //   super();
+  //   this.handleIncrement = this.handleIncrement.bind(this);
+  // }
+
+  handleIncrement = () => {
+    console.log("Increment Clicked", this);
+  };
 
   render() {
     return (
