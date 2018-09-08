@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// Passing Event Argument
+// Composing Components
 class Counter extends Component {
   state = {
     count: 0
